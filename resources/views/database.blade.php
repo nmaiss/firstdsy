@@ -79,9 +79,6 @@
     </div>
 </a>
 
-
-
-
 <div class="hrlignes">
     <div class="armoirie">
         <a href="/">

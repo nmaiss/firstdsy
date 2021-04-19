@@ -77,7 +77,7 @@
 
 <form method="POST" action="{{ route('login') }}">
     @csrf
-    <div class="container login-form">
+    <div class="container-fluid login-form">
         <div class="row">
             <div class="col field-title identifiant-title">IDENTIFIANT</div>
             <div class="col field-title motdepasse-title">MOT DE PASSE</div>

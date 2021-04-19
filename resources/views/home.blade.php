@@ -4,7 +4,7 @@
             background-color: white;
         }
 
-        .container{
+        .container-fluid{
             text-align: center!important;
         }
 
@@ -50,14 +50,14 @@
             background-color: #009999!important;
             border: 2px #009999 solid!important;
             margin-right: 5%;
-            margin-left: -50%;
+            margin-left: 5%;
         }
 
         .r-link{
             background-color: #FF7C80!important;
             border: 2px #FF7C80 solid!important;
             margin-left: 5%;
-            margin-right: -50%;
+            margin-right: 5%;
         }
 
         .geeks {
@@ -85,7 +85,7 @@
         @csrf
     </form>
 </div>
-<div class="container">
+<div class="container-fluid">
     <div class="geeks"></div>
     <div class="row">
       <div class="col armoirie">

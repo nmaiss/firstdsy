@@ -53,8 +53,8 @@
     }
 
     .table-agents{
-        margin-left: 10%;
-        margin-right: 10%;
+        margin-left: 3%;
+        margin-right: 3%;
     }
 
     .geeks {

@@ -23,6 +23,31 @@
         a:hover{
             text-decoration: none;
         }
+
+        .geeks::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: grey;
+            animation: animate 5s linear infinite;
+        }
+
+        @keyframes animate {
+            0% {
+                left: 0;
+            }
+
+            50% {
+                left: 100%;
+            }
+
+            0% {
+                left: 0;
+            }
+        }
     </style>
 </head>
 <body>

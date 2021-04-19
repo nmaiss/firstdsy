@@ -56,6 +56,15 @@
         background-color: #FEEDEC!important;
         color: #FF5050!important;
     }
+
+    .geeks {
+        width: 500px;
+        height: 2px;
+        background: #fff;
+        margin-top: 50px;
+        margin-left: 50%;
+        transform: translate(-50%, -50%);
+    }
 </style>
 
 @extends('layouts.app')
@@ -72,7 +81,8 @@
                 <img src="{{ URL::to('/assets/img/ArmoiriesRCA.png') }}">
             </a>
         </div>
-        <hr class="divider-horizontal">
+        <div class="geeks"></div>
+        <span class="divider-horizontal">
         <div class="logout">
             <a href="{{ route('logout') }}"
                onclick="event.preventDefault();

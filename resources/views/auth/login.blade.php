@@ -54,6 +54,15 @@
             margin-top: 100px;
         }
 
+        .geeks {
+            width: 500px;
+            height: 2px;
+            background: #fff;
+            margin-top: 50px;
+            margin-left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
     </style>
 </head>
 
@@ -76,9 +85,11 @@
                 <input id="password" type="password" class="motdepasse login-field form-control @error('password') is-invalid @enderror" name="password" value="{{ old('password') }}" required autocomplete="password" autofocus>
             </div>
             <div class="w-100"></div>
+            <div class="geeks"></div>
+            <div class="w-100"></div>
             <div class="col">
                 <div class="form-group submit-login">
-                    <hr class="divider-fields">
+                    <span class="divider-fields">
                     <input class="submit-image" type="image" src="{{ URL::to('/assets/img/Play.png') }}"></input>
                 </div>
             </div>

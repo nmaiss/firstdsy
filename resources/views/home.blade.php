@@ -55,6 +55,16 @@
             background-color: #FF7C80!important;
             border: 2px #FF7C80 solid!important;
         }
+
+        .geeks {
+            width: 500px;
+            height: 2px;
+            background: #fff;
+            position: absolute;
+            top: 380px;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
     </style>
 </head>
 
@@ -72,6 +82,7 @@
     </form>
 </div>
 <div class="container">
+    <div class="geeks"></div>
     <div class="row">
       <div class="col armoirie">
         <img src="{{ URL::to('/assets/img/ArmoiriesRCA.png') }}">

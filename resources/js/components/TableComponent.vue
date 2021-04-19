@@ -17,6 +17,15 @@
                 <input type="button" v-if="field.key == 'agent'" value="Ajouter" v-on:click="newAgent">
               </td>
             </template>
+
+            <template #thead-top="data">
+              <b-tr>
+                <b-th class="new-element">{{ newPrefecture }}</b-th>
+                <b-th class="new-element">{{ newVille }}</b-th>
+                <b-th class="new-element">{{ newPassword }}</b-th>
+                <b-th class="new-element">{{ agentId }}</b-th>
+              </b-tr>
+            </template>
         </b-table>
     </div>
 </template>

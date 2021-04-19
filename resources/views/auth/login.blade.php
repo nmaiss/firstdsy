@@ -55,12 +55,16 @@
         }
 
         .geeks {
-            width: 500px;
+            width: 300px;
             height: 2px;
             background: #fff;
             margin-top: 50px;
-            margin-left: 50%;
+            margin-left: 40%;
             transform: translate(-50%, -50%);
+        }
+
+        input{
+            outline: none;
         }
 
     </style>

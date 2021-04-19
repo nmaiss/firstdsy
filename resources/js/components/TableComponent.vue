@@ -24,7 +24,12 @@
                 <b-th class="new-element">{{ newVille }}</b-th>
                 <b-th class="new-element">{{ newPassword }}</b-th>
                 <b-th class="new-element">{{ agentId }}</b-th>
+                <b-th class="new-element"></b-th>
               </b-tr>
+            </template>
+
+            <template #cell(delete)="data">
+              <a :href='"/database/" +  data.item.id + "/delete"'>Supprimer</a>
             </template>
         </b-table>
     </div>
@@ -102,6 +107,10 @@
                     key: 'agent',
                     label: 'AGENT',
                     sortable: true,
+                  },
+                  {
+                      key: 'delete',
+                      label: 'SUPPRIMER'
                   },
                 ],
             }

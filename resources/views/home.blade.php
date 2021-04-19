@@ -49,20 +49,24 @@
         .db-link{
             background-color: #009999!important;
             border: 2px #009999 solid!important;
+            margin-right: 5%;
+            margin-left: -50%;
         }
 
         .r-link{
             background-color: #FF7C80!important;
             border: 2px #FF7C80 solid!important;
+            margin-left: 5%;
+            margin-right: -50%;
         }
 
         .geeks {
-            width: 500px;
+            width: 300px;
             height: 2px;
             background: #fff;
             position: absolute;
             top: 380px;
-            left: 50%;
+            left: 40%;
             transform: translate(-50%, -50%);
         }
     </style>

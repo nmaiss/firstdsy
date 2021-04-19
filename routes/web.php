@@ -20,6 +20,8 @@ Route::get('/', function () {
     return view('home');
 })->middleware('auth');;
 
-Route::get('/database', [\App\Http\Controllers\DatabaseController::class, 'index'])->middleware('auth');
+Route::get('/database', [\App\Http\Controllers\DatabaseController::class, 'index'])->name('dba');
 
 Route::get('/recensement', [\App\Http\Controllers\RecensementController::class, 'index'])->middleware('auth');
+
+Route::get('/database/{id}/delete', [\App\Http\Controllers\DatabaseController::class, 'delete']);

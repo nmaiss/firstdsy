@@ -21,4 +21,11 @@ class DatabaseController extends Controller
         ]);
         return view('database');
     }
+
+    public function delete($id) {
+        $agents = Agent::all();
+        $country = Agent::find($id);
+        $country->delete();
+        return redirect()->route('dba');
+    }
 }

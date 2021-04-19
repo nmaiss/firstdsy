@@ -1,13 +1,19 @@
 <head>
     <style>
+
+    .table thead th{
+        background-color: #FEEDEC!important;
+        color: #FF5050!important;
+    }
+
     .database-link{
         font-size: 1.5em;
-        background-color: #F4B081;
+        background-color: #FF7C80;
         padding-top: 40px;
         padding-bottom: 40px;
-        color: #C55A11;
+        color: white;
         font-weight: bold;
-        border: 4px #C55A11 solid!important;
+        border: 4px #FFFFFF solid!important;
         border-radius: 20px!important;
         text-align: center;
         margin-left: 30%;
@@ -60,7 +66,7 @@
 
 <a href="/recensement">
     <div class="database-link">
-      RECENSEMENTS
+      DÉCLARATIONS
     </div>
 </a>
 

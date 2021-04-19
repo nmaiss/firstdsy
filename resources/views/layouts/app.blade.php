@@ -18,6 +18,12 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+
+    <style>
+        a:hover{
+            text-decoration: none;
+        }
+    </style>
 </head>
 <body>
     <div id="app">

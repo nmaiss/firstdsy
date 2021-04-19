@@ -13,12 +13,28 @@
         }
 
         .login-field{
-            height: 100px!important;
+            height: 150px!important;
             font-size: 2em!important;
             text-align: center!important;
-            background-color: #FBE4D4!important;
-            border: 2px #F6C3A0 solid!important;
             border-radius: 20px!important;
+        }
+
+        .identifiant {
+            background-color: #009999!important;
+            border: 2px #009999 solid!important;
+        }
+
+        .motdepasse {
+            background-color: #FF7C80!important;
+            border: 2px #FF7C80 solid!important;
+        }
+
+        .identifiant-title{
+            color: #009999!important;
+        }
+
+        .motdepasse-title{
+            color: #FF7C80!important;
         }
 
         .submit-login{
@@ -27,11 +43,11 @@
         }
 
         .divider-fields{
-            margin-bottom: 80px;
+            margin-bottom: 40px;
         }
 
         .submit-image{
-            height: 200px;
+            height: 300px;
         }
 
         .login-form{
@@ -50,14 +66,14 @@
     @csrf
     <div class="container login-form">
         <div class="row">
-            <div class="col field-title">IDENTIFIANT</div>
-            <div class="col field-title">MOT DE PASSE</div>
+            <div class="col field-title identifiant-title">IDENTIFIANT</div>
+            <div class="col field-title motdepasse-title">MOT DE PASSE</div>
             <div class="w-100"></div>
             <div class="col">
-                <input id="email" type="text" class="login-field form-control @error('id') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
+                <input id="email" type="text" class="identifiant login-field form-control @error('id') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
             </div>
             <div class="col">
-                <input id="password" type="password" class="login-field form-control @error('password') is-invalid @enderror" name="password" value="{{ old('password') }}" required autocomplete="password" autofocus>
+                <input id="password" type="password" class="motdepasse login-field form-control @error('password') is-invalid @enderror" name="password" value="{{ old('password') }}" required autocomplete="password" autofocus>
             </div>
             <div class="w-100"></div>
             <div class="col">

@@ -9,13 +9,15 @@
         }
 
         .logo-site img{
-            height: 150px;
-            margin-bottom: 80px;
+            height: 230px;
+            margin-bottom: 120px;
+            box-shadow: 5px 5px 5px grey;
         }
 
         .armoirie img{
-            height: 400px;
-            margin-bottom: 50px;
+            height: 130px;
+            margin-top: 50px;
+            margin-bottom: 80px;
         }
 
         .database-link{
@@ -25,7 +27,6 @@
             padding-bottom: 60px;
             color: #F4B081;
             font-weight: bold;
-            border: 2px #F6C3A0 solid!important;
             border-radius: 20px!important;
         }
 
@@ -37,12 +38,22 @@
             position: absolute;
             right: 50;
             top: 0;
-            top: 50%;
-            transform: translateY(-60%);
+            top: 320px;
         }
 
         .database-link{
             text-decoration: none!important;
+            color: white;
+        }
+
+        .db-link{
+            background-color: #009999!important;
+            border: 2px #009999 solid!important;
+        }
+
+        .r-link{
+            background-color: #FF7C80!important;
+            border: 2px #FF7C80 solid!important;
         }
     </style>
 </head>
@@ -62,25 +73,25 @@
 </div>
 <div class="container">
     <div class="row">
-      <div class="col logo-site">
-          <img src="{{ URL::to('/assets/img/logo.jpg') }}">
-      </div>
-      <div class="w-100"></div>
       <div class="col armoirie">
         <img src="{{ URL::to('/assets/img/ArmoiriesRCA.png') }}">
       </div>
       <div class="w-100"></div>
+      <div class="col logo-site">
+          <img src="{{ URL::to('/assets/img/logo.jpg') }}">
+      </div>
+      <div class="w-100"></div>
       <div class="col">
           <a href="/database">
-              <div class="database-link">
+              <div class="database-link db-link">
                 BASE DE DONNÉES
               </div>
           </a>
       </div>
       <div class="col">
           <a href="/recensement">
-              <div class="database-link">
-                RECENSEMENT
+              <div class="database-link r-link">
+                DÉCLARATIONS
               </div>
           </a>
       </div>

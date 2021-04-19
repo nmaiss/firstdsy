@@ -6,6 +6,8 @@
           :sort-by="sortBy"
           :sort-desc.sync="sortDesc"
           primary-key="a"
+          sort-icon-left
+          responsive="sm"
         >
             <template slot="top-row" slot-scope="{ fields }">
               <td v-for="field in fields" :key="field.key">
@@ -25,23 +27,41 @@
 
     var firebaseui = require('firebaseui');
 
-
     export default{
         props: ['agents'],
         methods: {
           newAgent: function (event){
               if (this.newPassword != '' && this.newPassword != '' && this.newPrefecture != ''){
-                  this.agentId = this.newPrefecture.substr(0, 3) + this.newVille.substr(0, 3) + "01"
-                  firebase.auth().createUserWithEmailAndPassword(this.agentId + "@mail.com", this.newPassword)
-                     .catch(function (err) {
-                       console.log(err)
-                     });
-                  axios.post('/api/database/store', {password: this.newPassword, prefecture: this.newPrefecture, city: this.newVille, agent: this.agentId})
-                      .then(
-                          console.log("sucess")
-                      ).catch(err => {
-                      console.log(err)
-                  })
+                  var nb = 1;
+                  firebase.firestore().collection("agents/" + this.newPrefecture + "/" + this.newVille + "/").get().then((querySnapshot) => {
+                        querySnapshot.forEach((doc) => {
+                            nb++;
+                        });
+                        this.agentId = this.newPrefecture.substr(0, 3) + this.newVille.substr(0, 3) + "0" + nb.toString();
+                        firebase.auth().createUserWithEmailAndPassword(this.agentId + "@mail.com", this.newPassword)
+                           .catch(function (err) {
+                             console.log(err)
+                           });
+
+                       firebase.firestore().collection("agents/" + this.newPrefecture + "/" + this.newVille + "/").add({
+                           agent: this.agentId,
+                           password: this.newPassword,
+                       })
+
+                       firebase.firestore().collection("agents/").add({
+                           agent: this.agentId,
+                           password: this.newPassword,
+                           prefecture: this.newPrefecture,
+                           city: this.newVille,
+                       })
+
+                        axios.post('/api/database/store', {password: this.newPassword, prefecture: this.newPrefecture, city: this.newVille, agent: this.agentId})
+                            .then(
+                                console.log("sucess")
+                            ).catch(err => {
+                            console.log(err)
+                        })
+                    });
               }
           }
         },
@@ -51,7 +71,7 @@
                 newVille: '',
                 newPassword: '',
                 agentId: '',
-                sortBy: 'prefecture',
+                sortBy: 'agent',
                 sortDesc: true,
                 fields: [
                   {

@@ -34,7 +34,7 @@
                      label: 'Horodateur',
                    },
                    {
-                     key: 'date',
+                     key: 'recensementDate',
                      label: 'Date de recensement',
                    },
                    {
@@ -46,15 +46,11 @@
                      label: 'Date de naissance',
                    },
                    {
-                     key: 'semaines',
-                     label: 'Semaines',
-                   },
-                   {
-                     key: 'mois',
+                     key: 'month',
                      label: 'Mois',
                    },
                    {
-                     key: 'annees',
+                     key: 'year',
                      label: 'Années',
                    },
                    {

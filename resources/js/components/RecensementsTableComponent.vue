@@ -1,6 +1,10 @@
+<style>
+
+</style>
+
 <template>
     <div>
-        <b-table hover :items="recensements" :fields="fields"></b-table>
+        <b-table hover :items="recensements" :fields="fields" bordered outlined></b-table>
     </div>
 </template>
 
@@ -93,7 +97,7 @@
                      key: 'childNames',
                      label: 'Prénoms secondaires',
                    },
-                   
+
 
                  ],
                  recensements: [],

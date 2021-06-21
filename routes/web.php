@@ -25,3 +25,5 @@ Route::get('/database', [\App\Http\Controllers\DatabaseController::class, 'index
 Route::get('/recensement', [\App\Http\Controllers\RecensementController::class, 'index'])->middleware('auth');
 
 Route::get('/database/{id}/delete', [\App\Http\Controllers\DatabaseController::class, 'delete']);
+
+Route::get('/modifier/{id}/', [\App\Http\Controllers\ModifierRecensementController::class, 'index']);

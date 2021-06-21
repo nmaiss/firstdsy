@@ -4,7 +4,9 @@
 
 <template>
     <div>
-        <b-table hover :items="recensements" :fields="fields" bordered outlined></b-table>
+        <b-table hover :items="recensements" :fields="fields" bordered outlined>
+        
+        </b-table>
     </div>
 </template>
 
@@ -29,6 +31,10 @@
         data: function() {
              return {
                  fields: [
+                   {
+                     key: 'change_elem',
+                     label: 'Modifier',
+                   },
                    {
                      key: 'reference',
                      label: 'Référence',
@@ -97,7 +103,6 @@
                      key: 'childNames',
                      label: 'Prénoms secondaires',
                    },
-
 
                  ],
                  recensements: [],
